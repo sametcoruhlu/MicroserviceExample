@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "dd70c866-2a2d-4cc9-866f-09baa118594a",
+		"name": "MicroserviceExample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Article",
+			"item": [
+				{
+					"name": "Article Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7165/v1/articles",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7165",
+							"path": [
+								"v1",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Article Get Select Title (OData)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7165/v1/articles?$select=Title",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7165",
+							"path": [
+								"v1",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "$select",
+									"value": "Title"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Article Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7165/v1/articles(3fa85f64-5717-4562-b3fc-2c963f66afa6)",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7165",
+							"path": [
+								"v1",
+								"articles(3fa85f64-5717-4562-b3fc-2c963f66afa6)"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Article Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"title\": \"string\",\r\n  \"author\": \"string\",\r\n  \"articleContent\": \"string\",\r\n  \"publishDate\": \"2022-02-13T20:48:40.912Z\",\r\n  \"starCount\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7165/v1/articles",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7165",
+							"path": [
+								"v1",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Article Patch",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"title\": \"string\",\r\n  \"author\": \"string\",\r\n  \"articleContent\": \"string\",\r\n  \"publishDate\": \"2022-02-13T20:48:40.912Z\",\r\n  \"starCount\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7165/v1/articles(3fa85f64-5717-4562-b3fc-2c963f66afa6)",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7165",
+							"path": [
+								"v1",
+								"articles(3fa85f64-5717-4562-b3fc-2c963f66afa6)"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Article Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7165/v1/articles(3fa85f64-5717-4562-b3fc-2c963f66afa6)",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7165",
+							"path": [
+								"v1",
+								"articles(3fa85f64-5717-4562-b3fc-2c963f66afa6)"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Review Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7165/v1/reviews",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7165",
+							"path": [
+								"v1",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review Get Select Reviewer (OData)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7165/v1/reviews?$select=Reviewer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7165",
+							"path": [
+								"v1",
+								"reviews"
+							],
+							"query": [
+								{
+									"key": "$select",
+									"value": "Reviewer"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7165/v1/reviews(3fa85f64-5717-4562-b3fc-2c963f66afa6)",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7165",
+							"path": [
+								"v1",
+								"reviews(3fa85f64-5717-4562-b3fc-2c963f66afa6)"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"articleId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"reviewer\": \"string\",\r\n  \"reviewContent\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7165/v1/reviews",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7165",
+							"path": [
+								"v1",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review Patch",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"articleId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"reviewer\": \"string\",\r\n  \"reviewContent\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7165/v1/reviews(3fa85f64-5717-4562-b3fc-2c963f66afa6)",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7165",
+							"path": [
+								"v1",
+								"reviews(3fa85f64-5717-4562-b3fc-2c963f66afa6)"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7165/v1/reviews(3fa85f64-5717-4562-b3fc-2c963f66afa6)",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7165",
+							"path": [
+								"v1",
+								"reviews(3fa85f64-5717-4562-b3fc-2c963f66afa6)"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
